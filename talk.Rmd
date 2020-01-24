@@ -1,0 +1,17 @@
+---
+title: "Don't repeat yourself, talk to yourself! Repeated reporting in the R universe"
+author: "Sharla Gelfand"
+institute: "rstudio::conf(2020)"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+      ratio: "16:9"
+editor_options: 
+  chunk_output_type: consolex
+---
