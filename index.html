@@ -8,14 +8,511 @@
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-# Don’t repeat yourself, talk to yourself! Repeated reporting in the R universe
-### Sharla Gelfand
-### rstudio::conf(2020)
+class: middle, center, inverse
+
+# Don't repeat yourself, talk to yourself! Repeated reporting in the R universe
+
+
+
+.pull-left[
+&lt;img src="images/businessman/nurse-1.jpg" width="60%" style="display: block; margin: auto;" /&gt;
+
+### bit.ly/sharstudioconf
+]
+
+.pull-right[
+&lt;img src="images/businessman/calendar.jpg" width="60%" style="display: block; margin: auto;" /&gt;
+
+### @SharlaGelfand
+]
+
+---
+background-image: url("images/process/old-process-4.png")
+
+---
+background-image: url("images/process/old-process-5.png")
+
+---
+background-image: url("images/process/old-process-8.png")
+
+---
+class: center
+
+# The reports took all year!
+
+.pull-left[
+&lt;img src="images/businessman/hourglass.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+They weren't reproducible
+
+They were scattered, 
+
+hard to keep track of, boring, manual, repetitive
+
+not easily repeatable
+]
+
+---
+class: middle
+background-image: url("images/logos/R.png")
+
+---
+background-image: url("images/process/new-process-1.png")
+
+---
+background-image: url("images/process/new-process-2.png")
+
+---
+background-image: url("images/process/new-process-3.png")
+
+---
+class: center, middle
+
+.pull-left[
+&lt;br&gt;
+Reproducibility!
+
+Code all in one place!
+
+It'll be worth it!
+
+We can do new things!
+]
+
+.pull-right[
+&lt;img src="images/businessman/energy.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+layout: true
+
+# Next year arrives
 
 ---
 
+&lt;img src="images/files/blank-original.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+&lt;img src="images/code/templates/clean-data-artisanal-highlight.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+class: center
+
+.pull-left[
+# SPSS, Excel, Word
+
+Not reproducible
+
+Difficult to keep track of
+
+Manual and repetitive
+
+Not easily repeatable
+
+Time consuming
+]
+
+--
+
+.pull-right[
+# My R code
+
+Kind of reproducible
+
+Difficult to keep track of
+
+Manual and repetitive
+
+Not easily repeatable
+
+Time consuming
+]
+
+---
+class: center, middle, inverse
+
+# Don't repeat yourself
+
+# Talk to yourself!
+
+---
+class: center
+# Don't repeat yourself
+
+### Abstract away repetitive logic and automate repetitive processes
+
+.pull-left[
+&lt;img src="images/businessman/three-hand.jpg" width="75%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+Copy and pasting is error prone
+
+Focus should be on what changes
+
+Copying over and over and redoing work is pointless
+]
+
+---
+class: center
+
+# Talk to yourself
+
+### It's easier to document why you're doing something now than to remember why you did it a year ago
+
+.pull-left[
+&lt;img src="images/businessman/high-five.jpg" width="65%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+Focus on future-self instead of present-self
+
+Easy-to-read code doesn't explain motivations
+]
+
+---
+class: middle, center, inverse
+# I cleaned up after myself
+
+&lt;img src="images/businessman/papers.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+## Reorganize files
+
+&lt;img src="images/files/blank-original.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+## Reorganize files
+
+&lt;img src="images/files/reorganize-tidy.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+## Default ordering
+
+&lt;img src="images/files/ordering-tidy.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+## Setup file
+
+&lt;img src="images/code/setup/setup-initial.png" width="98%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+class: middle, center, inverse
+# I made functions
+
+&lt;img src="images/businessman/gears.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+&lt;img src="images/code/functions/clean-data-original.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+&lt;img src="images/code/functions/clean-data-change-vs-same.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center
+
+.pull-left[
+**Body:** what stays the same
+]
+
+.pull-right[
+**Argument:** what changes
+]
+
+&lt;img src="images/code/functions/clean-data-function-change-vs-same.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center, middle
+
+&lt;img src="images/code/setup/setup-with-query-function.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+background-image: url(images/logos/usethis-small.png)
+background-position: top right
+background-size: 125px 145px
+## Chatty functions
+
+
+
+```r
+library(usethis)
+ui_info("hi!")
+```
+
+
+
+&lt;img src="images/usethis-1.png" width="15%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+background-image: url(images/logos/usethis-small.png)
+background-position: top right
+background-size: 125px 145px
+## Chatty functions
+
+
+
+```r
+analysis_year &lt;- 2019
+
+ui_todo("Querying demographics data for
+        {analysis_year}...")
+```
+
+
+
+&lt;img src="images/usethis-2.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+---
+## Chatty functions
+
+&lt;img src="images/function-noisy.gif" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: middle, center, inverse
+# I made code templates
+
+&lt;img src="images/businessman/lorem-ipsum.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center
+
+## Artisanal data doesn't require artisanal code
+
+.pull-left[
+&lt;img src="images/artisan-data.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+Used to focus on cleaning *this* data really well
+
+Too specific!
+
+No idea why I did something
+
+]
+
+---
+class: center
+layout: false
+## Code templates
+
+.pull-left[
+&lt;br&gt;
+Generalizable code
+
+Super specific instructions
+
+Deal with artisanal data instead of remembering what to do
+]
+
+.pull-right[
+&lt;img src="images/businessman/template.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+layout: true
+## Prescriptive templates
+
+---
+
+&lt;img src="images/code/templates/clean-data-artisanal-highlight-crop.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+
+  
+&lt;img src="images/code/templates/clean-data-instructions-highlight.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+## Automating templates
+
+
+
+```r
+clean_data &lt;- function(analysis_year) {
+  usethis::use_template(
+*   template = "clean_data.R",
+    save_as = "01_clean-data.R",
+    data = list(analysis_year = analysis_year),
+    package = "demographicsreport"
+  )
+}
+```
+
+
+
+---
+layout: false
+## Automating templates
+
+
+
+```r
+clean_data &lt;- function(analysis_year) {
+  usethis::use_template(
+    template = "clean_data.R",
+*   save_as = "01_clean-data.R",
+    data = list(analysis_year = analysis_year),
+    package = "demographicsreport"
+  )
+}
+```
+
+
+
+---
+layout: false
+## Automating templates
+
+
+
+```r
+clean_data &lt;- function(analysis_year) {
+  usethis::use_template(
+    template = "clean_data.R",
+    save_as = "01_clean-data.R",
+*   data = list(analysis_year = analysis_year),
+    package = "demographicsreport"
+  )
+}
+```
+
+
+
+---
+layout: false
+class: middle, center, inverse
+# I put it all together in a package
+
+&lt;img src="images/businessman/boxes.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: center
+## Why make a package?
+
+.pull-left[
+&lt;img src="images/businessman/box.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+Organize functions
+
+Home for templates
+
+Better documentation
+
+Share code with coworkers
+]
+
+---
+
+&lt;img src="images/package-dir/blank.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="images/package-dir/functions.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="images/package-dir/templates.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="images/package-dir/documentation.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="images/package-dir/setup.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="images/package-dir/query-data.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+
+layout: false
+class: middle, center
+
+.pull-left[
+## Don't repeat yourself
+Cleaned up files
+
+Functions
+
+Templates
+
+Packages
+]
+
+.pull-right[
+## Talk to yourself!
+Clear names and ordering
+
+Chatty functions
+
+Prescriptive templates
+
+Package documentation
+]
+
+---
+class: center, middle
+
+# Repeated reporting in the R universe
+
+.pull-left[
+&lt;img src="images/businessman/party.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+Reproducible ✅ 
+
+Easy to keep track of ✅ 
+
+Minimal manual work ✅ 
+
+Easily repeatable ✅ 
+
+Frees up time... to spend making R packages 💁
+]
+
+---
+class: middle, center
+
+## If you have a repetitive task, abstract or automate what you can and loudly communicate the rest!
+
+--
+
+# Don't repeat yourself, talk to yourself!
+
+--
+
+.pull-left[
+Slides: [bit.ly/sharstudioconf](https://bit.ly/sharstudioconf)
+
+Tweets: @sharlagelfand
+]
+
+.pull-right[
+Blog post: [bit.ly/usethis4reporting](bit.ly/usethis4reporting)
+
+Images: Amonrat Rungreangfangsai
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

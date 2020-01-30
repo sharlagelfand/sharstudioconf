@@ -20,7 +20,6 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i);
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i);
 
-
 body {
   font-family: Fira Sans, 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
   font-weight: 300;
@@ -34,29 +33,29 @@ h1, h2, h3 {
 }
 .remark-slide-content {
   background-color: #FFFFFF;
-  font-size: 32px;
-
-
-
-  padding: 1em 2em 1em 2em;
+  font-size: 38px;
+  padding: 0.72em 1em 1em 1em;
+  line-height: 1.1em;
 }
 .remark-slide-content h1 {
-    font-size: 55px;
+    font-size: 60px;
+    line-height: 1.1em;
 }
 .remark-slide-content h2 {
     font-size: 45px;
+    line-height: 1.25em;
 }
 .remark-slide-content h3 {
-    font-size: 35px;
+    font-size: 38px;
 }
 .remark-code, .remark-inline-code {
   font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
 }
 .remark-code {
-  font-size: 0.6em;
+  font-size: 0.9em;
 }
 .remark-inline-code {
-  font-size: 0.6em;
+  font-size: 0.9em;
   color: #B04B5D;
 
 
@@ -68,7 +67,7 @@ h1, h2, h3 {
 }
 strong{color:#B04B5D;}
 a, a > code {
-  color: #76CFBD;
+  color: #529084;
   text-decoration: none;
 }
 .footnote {
@@ -120,11 +119,11 @@ a, a > code {
 }
 .pull-left {
   float: left;
-  width: 47%;
+  width: 50%;
 }
 .pull-right {
   float: right;
-  width: 47%;
+  width: 50%;
 }
 .pull-right ~ * {
   clear: both;
